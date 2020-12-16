@@ -1,0 +1,450 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Introduction · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.15">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ランディングページを作ってみよう！">ランディングページを作ってみよう！</h1>
+<h2 id="セットアップ">セットアップ</h2>
+<p>今回はすでにデザインされているデータをもとに全く同じデザインのサイトを作ってもらいます。
+デザインのデータはこちらのサイトからフォトショップのデータをダウンロードをします。
+実際はフォトショップから素材を取ってきますが、今回はこちらで用意したzipデータをダウンロードしてください。</p>
+<h2 id="意識する点">意識する点</h2>
+<p>今回作成してもらうに当たって意識しなければいけない点が、デザインを再現することです。
+この再現というのが、余白が１pxでも連れてはいけません。文字の大きさも1pxも違ってはいけません。
+ぴったり同じ大きさにしなければいけません。</p>
+<h2 id="理由">理由</h2>
+<p>業務ではデザインが完成した状態でデータが送られてきます。
+そのデザインというのはクライアント側が作って欲しいWebサイトになります。
+そのデザイン通りに作らなければ、クライアントのデザインとは違うものを作ってしまいます。</p>
+<h2 id="htmlを書いて行こう！">HTMLを書いて行こう！</h2>
+<p>ではHTMLを書いていきます。
+まずはテンプレートを書いていきます。</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>LP練習<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="header">header</h2>
+<p>今回は各セクションごとにコードを分けていきます。
+まずは<header>を作っていきます。</header></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>LP練習<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img/city.png&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-memu&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>サービス<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>ニュース<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>CSR<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>IR情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>会社情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>採用情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;contact&quot;</span>&gt;</span>お問い合わせ<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><img src="img/web1.png"></p>
+<p>このようになれば成功です。</p>
+<p><header>というタグはヘッダーを示すものになります。
+なくても影響はありませんが、<header>を指定することで、より読み取りやすいコードになるので、
+今回は指定していきます。</header></header></p>
+<p><nav>も<header>と意味合いは同じになります。
+ナビゲーションを示すものになるので特になくても影響はありませんが、今回は指定します。</header></nav></p>
+<p>次にcssの設定をしていきます。</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.side-header</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+}
+
+<span class="hljs-selector-class">.side-header</span> <span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<p>まずは横並びにしていきます。
+display:flexを使うことで要素を横並びにすることができます。
+次にjustify-content: space-between;で位置を指定します。</p>
+<p>次にロゴの位置を調節します。
+ margin-top: 30px;  margin-left: 20px;を指定することで余白を調節しています。</p>
+<pre><code class="lang-css">
+<span class="hljs-selector-class">.nav-memu</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+}
+
+<span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">30px</span>;
+}
+
+<span class="hljs-selector-class">.contact</span> {
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">90px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#30d0ed</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+</code></pre>
+<p>次にnavの設定行います。
+ここで重要となるのは.contactの部分になります。
+liの中で唯一クラスが異なリます。
+個別で設定していく必要がある部分なのでクラス名を一緒にしないようにしましょう。</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.nav-memu</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-class">.nav-memu</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+}
+
+<span class="hljs-selector-class">.nav-content</span> {
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">80px</span>;
+}
+</code></pre>
+<p>最後にfont-sizeと余白を整えていきます。</p>
+<p><img src="img/web2.png"></p>
+<p>このようになれば成功です。</p>
+<p>次にメインの部分を作っていきます。</p>
+<h2 id="main">main</h2>
+<p>まずはmainの部分を作っていきます。</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>LP練習<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img/city.png&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-memu&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>サービス<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>ニュース<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>CSR<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>IR情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>会社情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>採用情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;contact&quot;</span>&gt;</span>お問い合わせ<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>今回はこのmainにsectionを設定します。
+mainとsectionも特にコードに影響はありませんが、どの部分のコードかを明確化させるために書いていきます。</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>LP練習<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img/city.png&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-memu&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>サービス<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>ニュース<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>CSR<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>IR情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>会社情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-content&quot;</span>&gt;</span>採用情報<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;contact&quot;</span>&gt;</span>お問い合わせ<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-img&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;back&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-title&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img/Specialist.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;logo&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sub&quot;</span>&gt;</span>  
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sub-title&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img/subtitle.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;logo&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>今回sectionの中には今回使う画像データを入れます。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-12-16T08:37:37.167Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-16T08:38:24.191Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
