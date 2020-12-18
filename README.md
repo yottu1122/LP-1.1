@@ -276,3 +276,161 @@ main{
 
 このようになれば成功です。
 
+次にNewsの部分を作っていきます。
+
+まずはsectionを書いていきます。
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LP練習</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="side-header">
+      <div class="logo"><img src="img/city.png"/></div>
+      <nav>
+        <ul class="nav-memu">
+          <li class="nav-content">サービス</li>
+          <li class="nav-content">ニュース</li>
+          <li class="nav-content">CSR</li>
+          <li class="nav-content">IR情報</li>
+          <li class="nav-content">会社情報</li>
+          <li class="nav-content">採用情報</li>
+          <li class="contact">お問い合わせ</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-img">
+        <div class="back">
+            <img class="main-title" src="img/Specialist.png" alt="logo"/>
+        </div>
+        <div class="sub">  
+            <img class="sub-title" src="img/subtitle.png" alt="logo"/>
+        </div>
+      </section>
+      <section>
+
+      </section>
+    </main>
+</body>
+</html>
+```
+
+新しくsectionを作ることで次のフェーズにいくことがわかりやすくなります。
+次にNewsのコンテンツを入れていきます。
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LP練習</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="side-header">
+      <div class="logo"><img src="img/city.png"/></div>
+      <nav>
+        <ul class="nav-memu">
+          <li class="nav-content">サービス</li>
+          <li class="nav-content">ニュース</li>
+          <li class="nav-content">CSR</li>
+          <li class="nav-content">IR情報</li>
+          <li class="nav-content">会社情報</li>
+          <li class="nav-content">採用情報</li>
+          <li class="contact">お問い合わせ</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-img">
+        <div class="back">
+            <img class="main-title" src="img/Specialist.png" alt="logo"/>
+        </div>
+        <div class="sub">  
+            <img class="sub-title" src="img/subtitle.png" alt="logo"/>
+        </div>
+      </section>
+      <section>
+          <div class="news">
+            <div class="news-title"><img src="img/News.png" alt="news"/>
+              <p>一覧をみる></p>
+            </div>
+          </div>
+      </section>
+    </main>
+</body>
+</html>
+```
+
+次にnewsの内容を書いていきます。
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LP練習</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="side-header">
+      <div class="logo"><img src="img/city.png"/></div>
+      <nav>
+        <ul class="nav-memu">
+          <li class="nav-content">サービス</li>
+          <li class="nav-content">ニュース</li>
+          <li class="nav-content">CSR</li>
+          <li class="nav-content">IR情報</li>
+          <li class="nav-content">会社情報</li>
+          <li class="nav-content">採用情報</li>
+          <li class="contact">お問い合わせ</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-img">
+        <div class="back">
+            <img class="main-title" src="img/Specialist.png" alt="logo"/>
+        </div>
+        <div class="sub">  
+            <img class="sub-title" src="img/subtitle.png" alt="logo"/>
+        </div>
+      </section>
+      <section>
+          <div class="news">
+            <div class="news-title"><img src="img/News.png" alt="news"/>
+              <p>一覧をみる></p>
+            </div>
+             <div class="news-topics">
+              <div class="news-content">
+                <p class="date">2020.03.14</p>
+                <p class="label">プレス</p>
+                <p class="description">【東京オリンピック会場跡地再開発計画】複合スポーツ施設及び新テーマパーク工事開始のお知らせ                                            </p>
+              </div>
+              <div class="news-content1">
+                <p class="date">2020.02.30</p>
+                <p class="label1">IR</p>
+                <p class="description1"> 2019年9月期 第1四半期決算説明会動画</p>
+              </div>
+              <div class="news-content1">
+                <p class="date">2020.02.30</p>
+                <p class="label1">IR</p>
+                <p class="description1"> 2019年9月期 第1四半期決算説明会動画</p>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+</body>
+</html>
+```
+
+今回classの付け方は付け方は最初の部分はnews-contentでそのあとの二つには
+news-content1にしています。
+これは同じコードを書かないようにしています。
+
+できるだけ同じものはclassでまとめるようにしましょう。
