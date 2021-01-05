@@ -366,6 +366,24 @@ main{
 </html>
 ```
 
+次にcssを書いていきます。
+今回はnews-titleのcssを書いていきます。
+```css
+.news {
+  background-color: #edfcff;
+  padding-left: 10%;
+  display: flex;
+  padding-bottom: 64px;
+}
+
+.news-title {
+  margin-top: 70px;
+}
+```
+<img src=img/web4.png>
+このようになれば成功になります。
+
+
 次にnewsの内容を書いていきます。
 
 ```html
@@ -434,3 +452,144 @@ news-content1にしています。
 これは同じコードを書かないようにしています。
 
 できるだけ同じものはclassでまとめるようにしましょう。
+
+次にcssを書いていきます。
+
+ここではdateとnews-contentとnews-content1の設定していきます。
+
+```css
+
+.date{
+    margin-right: 10px;
+}
+
+
+.news-content{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 60px;
+    border-bottom: 0.5px solid;
+    border-color: #93deff;
+}
+
+.news-content1{
+    display: flex;
+    margin-left: 50px;
+    border-bottom: 0.5px solid;
+    border-color: #93deff;
+}
+```
+
+ここではcontentのcssを整えています。
+
+margin-leftの数値が違うので今回はnews-contentとnews-content1を分けています。  
+次に灰色の画像を表示します。
+
+```html
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="normalize.css/normalize.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>lp</title>
+  </head>
+  <body>
+    <header class="side-header">
+      <div class="logo"><img src="img/city.png"/></div>
+      <nav>
+        <ul class="nav-memu">
+          <li class="nav-content">サービス</li>
+          <li class="nav-content">ニュース</li>
+          <li class="nav-content">CSR</li>
+          <li class="nav-content">IR情報</li>
+          <li class="nav-content">会社情報</li>
+          <li class="nav-content">採用情報</li>
+          <li class="contact">お問い合わせ</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-img">
+        <div class="back"><img class="main-title" src="img/Specialist.png" alt="logo"/></div>
+        <div class="sub">  <img class="sub-title" src="img/subtitle.png" alt="logo"/></div>
+      </section>
+      <section>
+        <div class="news">
+          <div class="news-title"><img src="img/News.png" alt="news"/>
+            <p>一覧をみる></p>
+          </div>
+          <div class="news-topics">
+            <div class="news-content">
+              <p class="date">2020.03.14</p>
+              <p class="label">プレス</p>
+              <p class="description">【東京オリンピック会場跡地再開発計画】複合スポーツ施設及び新テーマパーク工事開始のお知らせ                                            </p>
+            </div>
+            <div class="news-content1">
+              <p class="date">2020.02.30</p>
+              <p class="label1">IR</p>
+              <p class="description1"> 2019年9月期 第1四半期決算説明会動画</p>
+            </div>
+            <div class="news-content1">
+              <p class="date">2020.02.30</p>
+              <p class="label1">IR</p>
+              <p class="description1"> 2019年9月期 第1四半期決算説明会動画</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="work">
+          <div class="work-title"><img src="img/Service.png" alt="work"/></div>
+          <div class="work-sub">  <img src="img/citylab.png" alt="work"/></div>
+          <div class="work-content"><img class="contents1" src="img/content.png" alt="work"/><img class="contents2" src="img/content.png" alt="work"/><img class="contents3" src="img/content.png" alt="work"/></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+```
+
+まずはsectionを作ります。
+次に今回の部分となるworkを書いていきます。
+workの中にはtitle画像とsub画像とcontentを入れています。
+ここではcontent内のないのclassを別々にか行く必要はあるので一緒にはしないでください。
+次にcssを設定していきます。
+
+```css
+.work{
+    text-align: center;
+}
+
+.work-title{
+    margin-top: 75px;
+}
+
+.work-sub{
+    margin-bottom: 22px;
+}
+
+.contents1{
+    margin-left: 10%;
+    margin-right: 15px;
+    width: 24%;
+}
+
+.contents2{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 24%;
+}
+
+.contents3{
+    margin-left: 15px;
+    margin-right: 10%;
+    width: 24%;
+}
+
+```
+
+こちらを設定すれば全ての設定は終了となります。
+
+お疲れ様でした。
