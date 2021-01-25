@@ -377,7 +377,12 @@ main{
 }
 
 .news-title {
-  margin-top: 70px;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.news-sub{
+    margin-top: 17px;
 }
 ```
 <img src=img/web4.png>
@@ -463,11 +468,32 @@ news-content1にしています。
     margin-right: 10px;
 }
 
+.date1{
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+
+.label{
+    background-color: #019bdf;
+    padding: 4px 26px 4px 26px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.label1{
+    background-color: #019bdf;
+    padding: 4px 39px 4px 39px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
 
 .news-content{
     display: flex;
     margin-left: 50px;
-    margin-top: 60px;
+    margin-top: 74px;
+    width: 100%;
     border-bottom: 0.5px solid;
     border-color: #93deff;
 }
@@ -475,6 +501,7 @@ news-content1にしています。
 .news-content1{
     display: flex;
     margin-left: 50px;
+    width: 100%;
     border-bottom: 0.5px solid;
     border-color: #93deff;
 }
@@ -590,7 +617,7 @@ workの中にはtitle画像とsub画像とcontentを入れています。
 
 ```
 
-<img src=img/web5.png>
+<img src=img/web6.png>
 このようになれば今回のサイトは完成になります。
 
 こちらを設定すれば全ての設定は終了となります。
