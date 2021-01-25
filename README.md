@@ -63,6 +63,7 @@
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
