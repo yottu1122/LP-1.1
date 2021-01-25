@@ -43,7 +43,7 @@
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="normalize.css/normalize.css" rel="stylesheet"/>
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     
@@ -179,6 +179,7 @@ liの中で唯一クラスが異なリます。
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
@@ -211,6 +212,7 @@ mainとsectionも特にコードに影響はありませんが、どの部分の
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
@@ -286,6 +288,7 @@ main{
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
@@ -329,6 +332,7 @@ main{
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
@@ -398,6 +402,7 @@ main{
     <meta charset="UTF-8">
     <title>LP練習</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/destyle.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="side-header">
@@ -518,8 +523,8 @@ margin-leftの数値が違うので今回はnews-contentとnews-content1を分�
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="normalize.css/normalize.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link href="css/destyle.css" rel="stylesheet"/>
     <title>lp</title>
   </head>
   <body>
